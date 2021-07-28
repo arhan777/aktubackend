@@ -36,6 +36,16 @@ app.get('/apistr/:id', (req, res) => {
     res.send(req.params.id)
 })
 
+app.post('/postapi', (req, res) => {
+    console.log(req.body);
+    res.send(req.body);
+})
+
+app.post('/postapistr', (req, res) => {
+    console.log(req.body);
+    res.send(req.body.id);
+})
+
 const url = `mongodb+srv://aktudata:WPmVjkbDwzChstXN@cluster0.alow0.mongodb.net/aktudatabase?retryWrites=true&w=majority`
 mongoose.connect(url, {
     useNewUrlParser: true,

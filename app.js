@@ -26,6 +26,16 @@ app.post('/login',async (req, res) => {
     });
 })
 
+app.get('/api/:id', (req, res) => {
+    console.log(req.params.id);
+    res.send(req.params)
+})
+
+app.get('/apistr/:id', (req, res) => {
+    console.log(req.params.id);
+    res.send(req.params.id)
+})
+
 const url = `mongodb+srv://aktudata:WPmVjkbDwzChstXN@cluster0.alow0.mongodb.net/aktudatabase?retryWrites=true&w=majority`
 mongoose.connect(url, {
     useNewUrlParser: true,

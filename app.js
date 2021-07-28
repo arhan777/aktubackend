@@ -44,8 +44,8 @@ mongoose.connect(url, {
     .then(() => console.log("MongoDB connected…"))
     .catch(err => console.log("error ", err))
 
+const port = process.env.PORT || 8000;
 
-
-app.listen(process.env.PORT || 8000, () => {
-    console.log("connected !!!");
+app.listen(port, () => {
+    console.log(`connected to port ${port}`);
 })
